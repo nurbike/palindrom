@@ -1,0 +1,13 @@
+#submitbtn {
+  display: none;
+}
+
+.bar {
+  display: flex;
+  justify-content: center;
+}
+
+#txt {
+  width: 200px;
+  height: 100px;
+}
