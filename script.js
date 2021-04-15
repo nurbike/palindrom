@@ -1,15 +1,15 @@
 
 var txtInput = document.getElementById("txt");
-var resultDiv = document.getElementById("result").innerHTML;
+var resultDiv = document.getElementById("result");
 
 
 txtInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         var palindrome = isPalindrome(txtInput.value);
         if (palindrome) {
-            console.log("palindrome");
+            document.getElementById("result").innerHTML = "Palindrome";
         } else {
-            console.log("deyil");
+            document.getElementById("result").innerHTML = "Not Palindrome";
         }
         txtInput.value = "";
     }
@@ -27,9 +27,9 @@ function isPalindrome(word) {
 }
 
 function showCorrect() {
-    resultDiv = "height: 100px; width: 100px; background: pink;";
+    resultDiv.style = "background-color: white; padding: 5px;";
 }
 
 function showWrong() {
-    resultDiv = "height: 100px; width: 100px; background: blue;";
+    resultDiv.style = "background-color: rgb(117, 10, 46);";
 }
