@@ -1,6 +1,7 @@
 
 var txtInput = document.getElementById("txt");
-var resultDiv = document.getElementById("result");
+var resultDiv = document.getElementById("result").innerHTML;
+
 
 txtInput.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
@@ -26,9 +27,9 @@ function isPalindrome(word) {
 }
 
 function showCorrect() {
-    resultDiv.style = "height: 100px; width: 100px; background: pink;";
+    resultDiv = "height: 100px; width: 100px; background: pink;";
 }
 
 function showWrong() {
-    resultDiv.style = "height: 100px; width: 100px; background: blue;";
+    resultDiv = "height: 100px; width: 100px; background: blue;";
 }
